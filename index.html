@@ -3,6 +3,8 @@
     if (Notification.permission != 'granted') {
       Notification.requestPermission();}
     if (Notification.permission == 'granted') {
+      
+      //https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API
       var notification = new Notification("@Raytracing says:", {body: "Hello World!", icon: "cdn2.scratch.mit.edu/get_image/user/29562757_60x60.png"});
     
     }
