@@ -1,7 +1,9 @@
 <body>
   <script>
-    while (Notification.permission !== 'granted') {
+    if (Notification.permission != 'granted') {
       Notification.requestPermission();}
-    var notification = new Notification("Hi there!");
+    if (Notification.permission == 'granted') {
+      var notification = new Notification("Hi there!");}
+    
   </script>
 </body>
