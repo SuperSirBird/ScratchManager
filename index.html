@@ -3,7 +3,7 @@
     if (Notification.permission != 'granted') {
       Notification.requestPermission();}
     if (Notification.permission == 'granted') {
-      var notification = new Notification("Hi there!");}
+      var notification = new Notification("Hi there!", {body: "testing", icon: "https://i.imgur.com/jWr67J8.png?1"});}
     
   </script>
 </body>
