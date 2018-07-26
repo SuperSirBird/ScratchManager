@@ -10,21 +10,26 @@
 </head>
 <body>
   
-  <h1>Scratch Messages</h1>
-  <input type="file" accept="image/png, image/jpeg">
+  <h1>Noti-Fake</h1>
+  <h2>Its not-i fake :P soz </h2><br>
+  <input type="file" accept="image/png, image/jpeg" id="notiIcon"><br>
+  <input type="text" placeholder="Noification Title" id="notiTitle"><br>
+  <input type="text" placeholder="Noification Message" id="notiBody"><br>
+  <button onclick="createnoti()">Create Notification!</button>
   <script>
     var imgicon;
     
+    function createnoti() {
     if (Notification.permission != 'granted') {
       Notification.requestPermission();}
     if (Notification.permission == 'granted') {
-      
+     
       //https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API
-      imgicon = "https://i.kym-cdn.com/entries/icons/original/000/000/091/TrollFace.jpg";
+      imgicon = document.getElementById("notiIcon").value;
       
-        var notification = new Notification("TROLOLOL", {body: "TROLL", icon: imgicon, requireInteraction: true});
+      var notification = new Notification("TROLOLOL", {body: "TROLL", icon: imgicon, requireInteraction: true});
     
-    }
+    }}
     
   </script>
 </body>
