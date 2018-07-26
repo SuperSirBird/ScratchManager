@@ -19,35 +19,6 @@
   </div>
   
   <script>
-    var imgicon;
-    
-    if (Notification.permission != 'granted') {
-      Notification.requestPermission().then(function(result) {
-       if (result === 'denied') {
-        console.log('Permission wasn\'t granted. Allow a retry.');
-       return;
-       if (result === 'default') {
-         console.log('The permission request was dismissed.');
-       return;
-       if (result === 'granted') {
-         console.log('The permission request was granted.');
-         startprogram();
-       return;}}
-         
-    if (Notification.permission == 'granted') {
-     startprogram();
-    }
-    function startprogram() {
-      console.log("hi")
-      // * If permision
-    }
-    
-    // Notifie function
-    function notifie() {
-      imgicon = "https://stoffe.kawaiifabric.com/images/product_images/large_img/solid-red-fabric-Robert-Kaufman-USA-Red-179485-1.JPG";
-      
-      var notification = new Notification("Template", {body: "Template2", icon: imgicon, requireInteraction: true});
-    }
     
     // Page not allowed
     
