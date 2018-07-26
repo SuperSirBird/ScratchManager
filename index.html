@@ -22,7 +22,7 @@
     var imgicon;
     
     if (Notification.permission != 'granted') {
-      Notification.requestPermission().then(startprogram());}
+      Notification.requestPermission(startprogram());}
     if (Notification.permission == 'granted') {
      startprogram();
     }
