@@ -1,3 +1,3 @@
-# noti-fake
+# ScratchManager
 
-Fake your notifications
+Manage your scratch account
