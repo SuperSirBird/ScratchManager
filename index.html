@@ -19,15 +19,15 @@
     var imgicon;
     
     if (Notification.permission != 'granted') {
-      Notification.requestPermission();}
+      Notification.requestPermission().then(startprogram());}
     if (Notification.permission == 'granted') {
-     
-      //https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API
+     startprogram();
+    }
+    function startprogram() {}
+    function notifie() {
       imgicon = "https://stoffe.kawaiifabric.com/images/product_images/large_img/solid-red-fabric-Robert-Kaufman-USA-Red-179485-1.JPG";
       
-      var notification = new Notification("Template", {body: "Template2", icon: imgicon, requireInteraction: true});
-    
-    }
-    
+      var notification = new Notification("Template", {body: "Template2", icon: imgicon, requireInteraction: true});}
+  
   </script>
 </body>
