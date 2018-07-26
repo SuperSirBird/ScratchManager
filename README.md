@@ -1,2 +1,3 @@
-# scratchmessage
-For your messages
+# noti-fake
+
+Fake your notifications
