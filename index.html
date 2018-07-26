@@ -10,10 +10,13 @@
   </style>
 </head>
 <body>
+  <div id="page1">
   
   <br><br>
-  <h1>Scratch Manager</h1>
-  <h5>By using this you are allowing us to put cookie(s) in your browser to save your settings. You can remove/clear them at any time</h5>
+    <h1>Scratch Manager</h1>
+    <h5>By using this you are allowing us to put cookie(s) in your browser to save your settings. You can remove/clear them at any time</h5>
+    <button onclick="denyin();" id="letin">Ok now let me in!</button>  
+  </div>
   
   <script>
     var imgicon;
@@ -23,11 +26,22 @@
     if (Notification.permission == 'granted') {
      startprogram();
     }
-    function startprogram() {}
+    function startprogram() {
+      if (Notification.permission == 'granted') {document.getElementById("letin").setAttribute("onclick","allowin()");}
+      // * If permision
+    }
+    
+    // Notifie function
     function notifie() {
       imgicon = "https://stoffe.kawaiifabric.com/images/product_images/large_img/solid-red-fabric-Robert-Kaufman-USA-Red-179485-1.JPG";
       
-      var notification = new Notification("Template", {body: "Template2", icon: imgicon, requireInteraction: true});}
+      var notification = new Notification("Template", {body: "Template2", icon: imgicon, requireInteraction: true});
+    }
+    
+    // Page not allowed
+    
+    function denyin() {document.getElementById("page1").innerHTML="404"}
+    function allowin() {document.getElementById("page1").innerHTML="ALLOWED"}
   
   </script>
 </body>
