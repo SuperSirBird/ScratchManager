@@ -14,8 +14,11 @@
   
   <br><br>
     <h1>Scratch Manager</h1>
+    <h5>Please Accept Notifications if havent, then continue</h5>
+    <button id="letin" onclick="getin()">Ok now let me in!</button> 
+    <br>
     <h5>By using this you are allowing us to put cookie(s) in your browser to save your settings. You can remove/clear them at any time</h5>
-    <button id="letin">Ok now let me in!</button>  
+     
   </div>
   
   <script>
@@ -23,9 +26,15 @@
     if (Notification.permission != "granted") {
     Notification.requestPermission();}
     
+    function getin() {if (Notification.permission == "granted") {scratchmanager();} else {alert("Please allow notifications");}}
     
-    // Manage Curators
-    //https://scratch.mit.edu/studios/1060340/
+    function scratchmanager() {
+    
+      alert("Let in");
+    
+      // Manage Curators
+      //https://scratch.mit.edu/studios/1060340/
+    }
     
   
   </script>
